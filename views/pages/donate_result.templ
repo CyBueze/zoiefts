@@ -1,0 +1,33 @@
+package pages
+
+import (
+	"zoie/models"
+	"zoie/views/layout"
+)
+
+templ DonateResult(d models.Donation) {
+	@layout.Base("Thank You") {
+		<section class="min-h-[80vh] flex items-center justify-center px-5">
+			<div class="max-w-md w-full text-center">
+				if d.Status == models.DonationSuccess {
+					<div class="w-16 h-16 mx-auto rounded-full bg-green-50 flex items-center justify-center text-green-600 text-3xl">✓</div>
+					<h1 class="mt-6 text-2xl font-extrabold text-gray-900">Thank you, { d.Name }!</h1>
+					<p class="mt-3 text-gray-600">
+						Your donation of ₦{ formatNaira(d.AmountKobo) } was received successfully.
+						It's going straight toward the next Feed The Street outreach.
+					</p>
+				} else {
+					<div class="w-16 h-16 mx-auto rounded-full bg-red-50 flex items-center justify-center text-red-500 text-3xl">!</div>
+					<h1 class="mt-6 text-2xl font-extrabold text-gray-900">We couldn't confirm that payment</h1>
+					<p class="mt-3 text-gray-600">
+						If an amount was deducted from your account, it should reverse automatically.
+						Feel free to try again, or reach out to us directly.
+					</p>
+				}
+				<a href="/#donate" class="mt-8 inline-flex items-center rounded-full bg-orange-600 px-6 py-3 text-sm font-semibold text-white hover:bg-orange-700 transition">
+					Back to site
+				</a>
+			</div>
+		</section>
+	}
+}

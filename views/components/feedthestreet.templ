@@ -1,0 +1,360 @@
+package components
+
+templ FeedTheStreet() {
+	<section
+		id="feed-the-street"
+		class="bg-orange-50 reveal overflow-hidden"
+		_="on intersection(intersecting) if intersecting add .reveal-active to me"
+	>
+		<div class="max-w-6xl mx-auto px-5 py-20 md:py-28">
+
+			<!-- Header -->
+			<div class="grid lg:grid-cols-2 gap-10 lg:gap-20 items-end">
+
+				<div class="max-w-3xl">
+					<span class="text-sm font-bold uppercase tracking-wider text-green-700">
+						Our Flagship Initiative
+					</span>
+
+					<h2 class="mt-3 text-4xl md:text-6xl font-extrabold text-gray-900 tracking-tight leading-tight">
+						Feed The Street
+					</h2>
+				</div>
+
+				<div>
+					<p class="text-gray-600 leading-relaxed">
+						An annual community outreach where we take practical support directly into communities, providing foodstuffs, showing up for families, and reminding people that they are seen and valued.
+					</p>
+				</div>
+
+			</div>
+
+
+			<!-- Main Campaign Feature -->
+			<div class="mt-14 grid lg:grid-cols-2 gap-6 items-stretch">
+
+				<!-- Campaign Story -->
+				<div class="rounded-3xl bg-green-800 text-white p-8 md:p-12 flex flex-col justify-between min-h-[480px]">
+
+					<div>
+
+						<span class="inline-flex items-center rounded-full bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-wider text-orange-200">
+							Seven years of showing up
+						</span>
+
+						<h3 class="mt-7 text-3xl md:text-4xl font-extrabold tracking-tight leading-tight">
+							Because sometimes,
+							help should simply
+							<span class="text-orange-400">show up.</span>
+						</h3>
+
+						<p class="mt-6 text-green-50 leading-relaxed max-w-xl">
+							Feed The Street grew from a simple desire to meet people where they are and provide something practical when they need it most.
+						</p>
+
+						<p class="mt-4 text-green-50 leading-relaxed max-w-xl">
+							Over the years, our outreach has taken us into communities across Nigeria. We have distributed foodstuffs, supported families, and responded to needs beyond food, including hospital bills and learning materials {"for"} primary school children.
+						</p>
+
+					</div>
+
+
+					<div class="mt-10 flex flex-wrap gap-3">
+
+						<a
+							href="#donate"
+							class="inline-flex items-center gap-2 rounded-full bg-orange-500 px-5 py-3 text-sm font-bold text-white hover:bg-orange-600 transition"
+						>
+							Support the mission
+							<span>↗</span>
+						</a>
+
+						<a
+							href="#gallery"
+							class="inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-3 text-sm font-bold text-white hover:bg-white/10 transition"
+						>
+							See our journey
+							<span>↗</span>
+						</a>
+
+					</div>
+
+				</div>
+
+
+				<!-- Upcoming Event Flyer (Click to Expand) -->
+				<div class="rounded-3xl bg-white p-3 shadow-sm border border-orange-100">
+
+					<div
+						_="on click remove .hidden from #flyer-modal then add .overflow-hidden to <body/>"
+						class="relative overflow-hidden rounded-2xl bg-gray-100 h-full min-h-[480px] cursor-pointer group"
+					>
+
+						<img
+							src="https://59doenkwa7.ufs.sh/f/jhH9iucglD1p1EqfUl98UHV5XlnQyT13OYIAj7icESwbq0aG"
+							alt="Upcoming Feed The Street outreach flyer"
+							class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+						/>
+
+						<!-- Hover Tag -->
+						<div class="absolute top-4 right-4 bg-black/60 backdrop-blur-md text-white text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5 opacity-90 group-hover:opacity-100 transition">
+							<span>🔍</span> Click to expand
+						</div>
+
+						<div class="absolute inset-x-0 bottom-0 p-5">
+
+							<div class="rounded-2xl bg-black/65 backdrop-blur-md p-5 text-white">
+
+								<div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-orange-300">
+									<span class="w-2 h-2 rounded-full bg-orange-400"></span>
+									Coming up
+								</div>
+
+								<h3 class="mt-2 text-xl font-extrabold">
+									Feed The Street 7.0
+								</h3>
+
+								<p class="mt-1 text-sm text-white">
+									Be part of the next outreach.
+								</p>
+
+								<div
+									class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-orange-300 group-hover:text-white transition"
+								>
+									View flyer details
+									<span>↗</span>
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+
+			<!-- How We Serve -->
+			<div class="mt-20">
+
+				<div class="max-w-xl">
+
+					<span class="text-xs font-bold uppercase tracking-wider text-orange-600">
+						How we serve
+					</span>
+
+					<h3 class="mt-3 text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">
+						From compassion to action.
+					</h3>
+
+					<p class="mt-4 text-gray-600 leading-relaxed">
+						Every outreach begins with a need and ends with people coming together to meet it.
+					</p>
+
+				</div>
+
+
+				<div class="mt-10 grid md:grid-cols-3 gap-5">
+
+					<!-- Step 1 -->
+					<div class="group rounded-2xl bg-white p-7 border border-orange-100 shadow-sm hover:-translate-y-1 hover:shadow-lg transition">
+
+						<div class="w-11 h-11 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 font-extrabold">
+							01
+						</div>
+
+						<h4 class="mt-6 text-xl font-bold text-gray-900">
+							We identify the need
+						</h4>
+
+						<p class="mt-3 text-sm text-gray-500 leading-relaxed">
+							We pay attention to the real needs of the communities we intend to serve and plan our response accordingly.
+						</p>
+
+					</div>
+
+
+					<!-- Step 2 -->
+					<div class="group rounded-2xl bg-white p-7 border border-orange-100 shadow-sm hover:-translate-y-1 hover:shadow-lg transition">
+
+						<div class="w-11 h-11 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 font-extrabold">
+							02
+						</div>
+
+						<h4 class="mt-6 text-xl font-bold text-gray-900">
+							We gather and prepare
+						</h4>
+
+						<p class="mt-3 text-sm text-gray-500 leading-relaxed">
+							Through donations and volunteers, we gather foodstuffs and other resources needed to make the outreach possible.
+						</p>
+
+					</div>
+
+
+					<!-- Step 3 -->
+					<div class="group rounded-2xl bg-white p-7 border border-orange-100 shadow-sm hover:-translate-y-1 hover:shadow-lg transition">
+
+						<div class="w-11 h-11 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 font-extrabold">
+							03
+						</div>
+
+						<h4 class="mt-6 text-xl font-bold text-gray-900">
+							We show up
+						</h4>
+
+						<p class="mt-3 text-sm text-gray-500 leading-relaxed">
+							We take the support directly into the community and serve people with dignity.
+						</p>
+
+					</div>
+
+				</div>
+
+			</div>
+
+
+			<!-- Beyond Food -->
+			<div class="mt-20 rounded-3xl bg-white border border-orange-100 overflow-hidden">
+
+				<div class="grid md:grid-cols-2">
+
+					<div class="p-8 md:p-12">
+
+						<span class="text-xs font-bold uppercase tracking-wider text-green-700">
+							Our work goes further
+						</span>
+
+						<h3 class="mt-3 text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">
+							Feed The Street is about more than food.
+						</h3>
+
+						<p class="mt-5 text-gray-600 leading-relaxed">
+							While food support remains a major part of our outreach, we do not want to reduce people's needs to a single category. Over the years, Zoie Foundation has responded to other needs as opportunities arose.
+						</p>
+
+					</div>
+
+
+					<div class="bg-green-50 p-8 md:p-12 flex flex-col justify-center gap-6">
+
+						<div class="flex gap-4">
+
+							<div class="shrink-0 w-10 h-10 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center font-bold">
+								✓
+							</div>
+
+							<div>
+								<h4 class="font-bold text-gray-900">
+									Food support
+								</h4>
+
+								<p class="mt-1 text-sm text-gray-600">
+									Providing foodstuffs to families and individuals in communities we reach.
+								</p>
+							</div>
+
+						</div>
+
+
+						<div class="flex gap-4">
+
+							<div class="shrink-0 w-10 h-10 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center font-bold">
+								✓
+							</div>
+
+							<div>
+								<h4 class="font-bold text-gray-900">
+									Healthcare support
+								</h4>
+
+								<p class="mt-1 text-sm text-gray-600">
+									Helping with hospital bills when we encounter people facing urgent medical needs.
+								</p>
+							</div>
+
+						</div>
+
+
+						<div class="flex gap-4">
+
+							<div class="shrink-0 w-10 h-10 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center font-bold">
+								✓
+							</div>
+
+							<div>
+								<h4 class="font-bold text-gray-900">
+									Education support
+								</h4>
+
+								<p class="mt-1 text-sm text-gray-600">
+									Providing learning materials to primary school children and supporting their education.
+								</p>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+
+			<!-- Closing CTA -->
+			<div class="mt-16 text-center">
+
+				<p class="text-gray-500 max-w-xl mx-auto leading-relaxed">
+					Every year gives us another opportunity to go further, reach more people, and do a little more good.
+				</p>
+
+				<a
+					href="#donate"
+					class="mt-6 inline-flex items-center gap-2 rounded-full bg-green-800 px-6 py-3.5 text-sm font-bold text-white hover:bg-green-900 hover:-translate-y-0.5 transition"
+				>
+					Help us reach more people
+					<span>↗</span>
+				</a>
+
+			</div>
+
+		</div>
+
+		<!-- Expandable Flyer Modal -->
+		<div
+			id="flyer-modal"
+			class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 sm:p-6 transition-all"
+			_="on keyup[key is 'Escape'] from window add .hidden to me then remove .overflow-hidden from <body/>"
+		>
+			<!-- Backdrop Click to Close -->
+			<div
+				class="absolute inset-0"
+				_="on click add .hidden to #flyer-modal then remove .overflow-hidden from <body/>"
+			></div>
+
+			<!-- Modal Content Wrapper -->
+			<div class="relative z-10 max-w-4xl max-h-[90vh] bg-black rounded-3xl overflow-hidden shadow-2xl flex flex-col animate-fade-in">
+				<!-- Close Button -->
+				<button
+					type="button"
+					_="on click add .hidden to #flyer-modal then remove .overflow-hidden from <body/>"
+					class="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-black/60 text-white flex items-center justify-center text-xl font-bold hover:bg-black/80 transition cursor-pointer"
+					aria-label="Close modal"
+				>
+					✕
+				</button>
+
+				<!-- Full Image Container -->
+				<div class="overflow-auto max-h-[85vh]">
+					<img
+						src="https://59doenkwa7.ufs.sh/f/jhH9iucglD1p1EqfUl98UHV5XlnQyT13OYIAj7icESwbq0aG"
+						alt="Feed The Street 7.0 outreach full flyer"
+						class="w-full h-auto object-contain mx-auto"
+					/>
+				</div>
+			</div>
+		</div>
+	</section>
+}

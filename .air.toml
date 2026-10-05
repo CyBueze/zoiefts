@@ -1,0 +1,11 @@
+root = "."
+tmp_dir = "tmp"
+
+[build]
+pre_cmd = ["templ generate"]
+bin = "./tmp/main"
+cmd = "go build -o ./tmp/main ."
+delay = 1000
+exclude_dir = ["assets", "tmp", "vendor"]
+include_ext = ["go", "templ"]
+exclude_regex = [".*_templ.go"]

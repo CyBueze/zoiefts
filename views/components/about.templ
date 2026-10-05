@@ -1,0 +1,48 @@
+package components
+
+import "zoie/views/data"
+
+templ About() {
+	<section
+		id="about"
+		class="max-w-6xl mx-auto px-5 py-20 md:py-28 reveal"
+		_="on intersection(intersecting) if intersecting add .reveal-active to me"
+	>
+		<div class="grid md:grid-cols-2 gap-12 items-start">
+			<div>
+				<span class="text-sm font-bold uppercase tracking-wide text-orange-600">About Us</span>
+				<h2 class="mt-3 text-3xl md:text-5xl font-extrabold text-green-900 tracking-tight leading-tight">
+					{ data.YearsActive } years of showing up
+				</h2>
+
+				for _, p := range data.AboutParagraphs {
+					<p class="mt-5 text-gray-600 leading-relaxed">{ p }</p>
+				}
+			</div>
+
+			<div class="grid grid-cols-2 gap-4">
+				for _, stat := range data.ImpactStats {
+					<div class="rounded-2xl border border-gray-100 bg-orange-50 p-6 text-center hover:-translate-y-1 hover:shadow-md transition">
+						<div class="text-4xl font-extrabold text-green-700 tracking-tight">{ stat.Value }</div>
+						<div class="mt-1 text-sm font-medium text-gray-500">{ stat.Label }</div>
+					</div>
+				}
+			</div>
+		</div>
+
+		<div class="mt-16">
+			<h3 class="text-lg font-bold text-green-900">Where we've served</h3>
+			<div class="mt-5 grid sm:grid-cols-2 gap-4">
+				for _, loc := range data.Locations {
+					<div class="rounded-xl border border-gray-100 p-5 hover:border-orange-200 hover:-translate-y-0.5 transition">
+						<div class="flex items-baseline gap-2">
+							<span class="font-bold text-gray-900">{ loc.Name }</span>
+							<span class="text-xs text-gray-400">{ loc.State }</span>
+						</div>
+						<p class="mt-1.5 text-sm text-gray-500">{ loc.Description }</p>
+					</div>
+				}
+			</div>
+		</div>
+	</section>
+}

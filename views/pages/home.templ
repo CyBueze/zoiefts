@@ -1,0 +1,19 @@
+package pages
+
+import (
+	"zoie/config"
+	"zoie/views/components"
+	"zoie/views/layout"
+)
+
+templ Home(cfg *config.Config) {
+	@layout.Base("Home") {
+		@components.Navbar()
+		@components.Hero()
+		@components.About()
+		@components.FeedTheStreet()
+		@components.Gallery(cfg.ImageBaseURL)
+		@components.Donate(cfg)
+		@components.Footer()
+	}
+}

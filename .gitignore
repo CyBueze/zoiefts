@@ -1,0 +1,36 @@
+# Executables & Binaries
+/tmp/
+/bin/
+*.exe
+*.exe?
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+/main
+/zoie
+
+# Go & Environment
+.env
+*.env
+vendor/
+
+# Database & Local Storage
+*.db
+*.sqlite
+*.sqlite3
+/data/*.db
+
+# OS & Editor Files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+*.bak
+
+# Logs
+*.log
+stuff.md
