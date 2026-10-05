@@ -11,7 +11,7 @@ import (
 
 func main() {
 	cfg := config.Load()
-	conn := db.Connect(cfg.DBPath)
+	conn := db.Connect(cfg.DatabaseURL)
 
 	if cfg.AppEnv == "production" {
 		gin.SetMode(gin.ReleaseMode)

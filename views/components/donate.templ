@@ -50,7 +50,7 @@ templ Donate(cfg *config.Config) {
 							for _, preset := range []int{5000, 10000, 25000, 50000} {
 								<button
 									type="button"
-									class="amount-preset rounded-lg border py-2.5 px-2 text-sm transition bg-white text-gray-700 border-gray-200"
+									class="amount-preset rounded-lg border py-2.5 px-2 text-xs transition bg-white text-gray-700 border-gray-200"
 									data-amount={ itoaLiteral(preset) }
 									_={ "on click set #amount-input.value to my @data-amount then set #amount-display.innerHTML to '₦" + formatThousands(preset) + "' then remove .bg-orange-600 from .amount-preset then remove .text-white from .amount-preset then remove .border-orange-600 from .amount-preset then add .bg-white to .amount-preset then add .text-gray-700 to .amount-preset then add .border-gray-200 to .amount-preset then remove .bg-white from me then remove .text-gray-700 from me then remove .border-gray-200 from me then add .bg-orange-600 to me then add .text-white to me then add .border-orange-600 to me" }
 								>
@@ -133,9 +133,6 @@ templ Donate(cfg *config.Config) {
 				<div id="bank-panel" class="mt-8 hidden space-y-4">
 					if cfg.BankAccountNumber != "" {
 						@bankCard(cfg.BankName, cfg.BankAccountName, cfg.BankAccountNumber)
-					}
-					if cfg.BankAccountNumber2 != "" {
-						@bankCard(cfg.BankName2, cfg.BankAccountName2, cfg.BankAccountNumber2)
 					}
 					<p class="text-xs text-gray-500">
 						After transferring, please send your receipt to us so we can confirm and say thank you —
